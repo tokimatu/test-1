@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TRPG GAME</title>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="htdocs/index.js"></script>
+    <link rel="stylesheet" href="htdocs/index.css" type="text/css">
+</head>
+  <body>
+
+    <video id="video" class="video" poster="" playsinline autoplay muted loop source
+        src="htdocs/select.mp4" type="video/mp4">
+    </video>
+
+      <video id="video_s" class="video" style="display:none"></video>
+      <video id="video0" class="video" style="display:none"></video>
+      <video id="video1" class="video" style="display:none"></video>
+      <video id="video2" class="video" style="display:none"></video>
+      <video id="video3" class="video" style="display:none"></video>
+      <video id="video4" class="video" style="display:none"></video>
+      <video id="video5" class="video" style="display:none"></video>
+      <video id="video6" class="video" style="display:none"></video>
+      <video id="video7" class="video" style="display:none"></video>
+      <video id="video8" class="video" style="display:none"></video>
+      <video id="video9" class="video" style="display:none"></video>
+      <video id="video10" class="video" style="display:none"></video>
+      <video id="video_sel" class="video" style="display:none"></video>
+      
+      <div id="card1" class="card" ></div>
+      <div id="card2" class="card" ></div>
+      <div id="card3" class="card" ></div>
+      <div id="card4" class="card" ></div>
+      <div id="card5" class="card" ></div>
+      <div id="card6" class="card" ></div>
+      <div id="card7" class="card" ></div>
+      <div id="card8" class="card" ></div>
+      <div id="card9" class="card" ></div>
+      <div id="card10" class="card" ></div>
+
+      <div id="new1" class="new frame animation" style="display:none"></div>
+      <div id="new2" class="new frame animation" style="display:none"></div>
+      <div id="new3" class="new frame animation" style="display:none"></div>
+      <div id="new4" class="new frame animation" style="display:none"></div>
+      <div id="new5" class="new frame animation" style="display:none"></div>
+      <div id="new6" class="new frame animation" style="display:none"></div>
+      <div id="new7" class="new frame animation" style="display:none"></div>
+      <div id="new8" class="new frame animation" style="display:none"></div>
+      <div id="new9" class="new frame animation" style="display:none"></div>
+      <div id="new10" class="new frame animation" style="display:none"></div>
+      <div id="mycard1_1" class="card1" onclick="foo(this)"></div>
+      <div id="mycard1_2" class="card1" onclick="foo(this)"></div>
+      <div id="mycard1_3" class="card1" onclick="foo(this)"></div>
+      <div id="mycard1_4" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_5" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_6" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_7" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_8" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_9" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_10" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_11" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_12" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_13" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_14" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_15" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_16" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_17" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_18" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_19" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_20" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_21" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_22" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_23" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_24" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_25" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_26" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_27" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_28" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_29" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_30" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_31" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_32" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_33" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_34" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_35" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_36" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_37" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_38" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_39" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_40" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_41" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_42" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_43" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_44" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_45" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_46" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_47" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_48" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_49" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_50" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_51" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_52" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_53" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_54" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_55" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_56" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_57" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_58" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_59" class="card1" onclick="foo(this)" ></div>
+      <div id="mycard1_60" class="card1" onclick="foo(this)" ></div>
+
+      <div id="mycard2_1" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_2" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_3" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_4" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_5" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_6" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_7" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_8" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_9" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_10" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_11" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_12" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_13" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_14" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_15" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_16" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_17" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_18" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_19" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_20" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_21" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_22" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_23" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_24" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_25" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_26" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_27" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_28" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_29" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_30" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_31" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_32" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_33" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_34" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_35" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_36" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_37" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_38" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_39" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_40" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_41" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_42" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_43" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_44" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_45" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_46" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_47" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_48" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_49" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_50" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_51" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_52" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_53" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_54" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_55" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_56" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_57" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_58" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_59" class="card2" onclick="foo(this)" ></div>
+      <div id="mycard2_60" class="card2" onclick="foo(this)" ></div>
+
+      <div id="mycard3_1" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_2" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_3" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_4" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_5" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_6" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_7" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_8" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_9" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_10" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_11" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_12" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_13" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_14" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_15" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_16" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_17" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_18" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_19" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_20" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_21" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_22" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_23" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_24" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_25" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_26" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_27" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_28" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_29" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_30" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_31" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_32" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_33" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_34" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_35" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_36" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_37" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_38" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_39" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_40" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_41" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_42" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_43" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_44" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_45" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_46" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_47" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_48" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_49" class="card3" onclick="foo(this)" ></div>
+      <div id="mycard3_50" class="card3" onclick="foo(this)" ></div>
+
+      <div id="mycard4_1" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_2" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_3" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_4" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_5" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_6" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_7" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_8" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_9" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_10" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_11" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_12" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_13" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_14" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_15" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_16" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_17" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_18" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_19" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_20" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_21" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_22" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_23" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_24" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_25" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_26" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_27" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_28" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_29" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_30" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_31" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_32" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_33" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_34" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_35" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_36" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_37" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_38" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_39" class="card4" onclick="foo(this)" ></div>
+      <div id="mycard4_40" class="card4" onclick="foo(this)" ></div>
+
+      <div id="mycard5_1" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_2" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_3" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_4" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_5" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_6" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_7" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_8" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_9" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_10" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_11" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_12" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_13" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_14" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_15" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_16" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_17" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_18" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_19" class="card5" onclick="foo(this)" ></div>
+      <div id="mycard5_20" class="card5" onclick="foo(this)" ></div>
+      <header>
+        <h1>ガチャサイト</h1>
+          <nav>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+        </header>
+        <div id="fashion">
+          <h2></h2>
+        </div>
+        <div class="btn-square-so-pop1" id="button"></div>
+        <div class="btn-square-so-pop2" id="button3"></div>
+        <div class="cbutton2" id="button1" style="display:none"></div>
+        <div class="cbutton3" id="button2" style="display:none"></div>
+        <div id="time1" class="ring" style="display:none"><span></span></div>
+
+        <section id="modalArea" class="modalArea">
+          <div id="modalBg" class="modalBg"></div>
+            <div id="card_detail1" class="card_detail1"></div>
+        </section>
+  </body>
+</html>
